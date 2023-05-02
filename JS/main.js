@@ -1,6 +1,11 @@
 // variabili globali
 const costoAlKm = 0.21;
-let kmDaPercorrere, anni;
+let kmDaPercorrere, anni, nameUser, nome; 
+const bottone = document.getElementById('bottone');
+
+// calcolare prezzo biglietto
+let prezzoBiglietto = costoAlKm * kmDaPercorrere;
+console.log(prezzoBiglietto);
 
 // CALCOLO DEL PREZZO DEL BIGLIETTO DEL TRENO
 // chiede all'utente quanti chilometri vuole percorrere
@@ -11,9 +16,24 @@ let kmDaPercorrere, anni;
 // let anni = parseInt(prompt("Quanti anni hai?"));
 // console.log(anni);
 
-// calcolare prezzo biglietto
-let prezzoBiglietto = costoAlKm * kmDaPercorrere;
-console.log(prezzoBiglietto);
+bottone.addEventListener('click',
+    function () {
+
+        //estrapolare valore del nome
+        nome = document.getElementById('nome').value;
+        console.log(nome);
+
+        //estrapolare valore dei km
+        kmDaPercorrere = document.getElementById('km').value;
+        console.log(kmDaPercorrere);
+
+        //estrapolare valore fascia di età
+        anni = document.getElementById('age').value;
+        console.log(anni);
+    }
+)
+
+
 
 // verificare la fascia di età
 
@@ -50,7 +70,13 @@ console.log(prezzoBiglietto);
     
 
     //----------------------
+    nameUser = document.getElementById("name").value = "";
+button.addEventListener("click",
 
+    function () {
+        
+        
+}
+);
 
-    document.getElementById("name").value = "";
-    console.log(value);
+    
